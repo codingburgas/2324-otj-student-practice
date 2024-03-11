@@ -109,7 +109,7 @@ Additional requirements will be added later.
   1. Clone the repo
 
 ```
-  git clone https://github.com/MVKoleva21/TBA.git --recursive
+  git clone https://github.com/codingburgas/2324-otj-10-movie-ticket-booking-system-IIBozhilov21.git
 ```
      
 ### With Visual Studio
