@@ -1,6 +1,17 @@
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/pXN_QAqQ)
 # 2223-10: On the job training (OTJ) project
 
+
+
+## 📋 Table of contents
+  - [Description](#description)
+  - [How to run](#install)
+  - [Collaborators](#collaborators)
+
+
+
+## 🔍 Description <a name="description"></a>
+
 # Movie Ticket booking system
 This document describes the OTJ project for 10th graders. **It will be updated frequently**.
 
@@ -89,3 +100,23 @@ The following are the requirements that we have defined for the movie ticket boo
 * Following the best practices for C++ / Git / GitHub is a mandatory requirement
 
 Additional requirements will be added later.
+
+
+## 📂 How to run <a name="install"></a>
+
+### Installation
+
+  1. Clone the repo
+
+```
+  git clone https://github.com/MVKoleva21/TBA.git --recursive
+```
+     
+### With Visual Studio
+
+  2. Chose 1 to generate files for Visual Studio
+  3. Open the solution file with Visual Studio
+  4. Compile the project by hitting CTRL + F5 key combination
+
+## 🧑 Collaborators <a name="collaborators"></a>
+- [Ivelin Bozhilov](https://github.com/IIBozhilov21) - Fullstack developer
