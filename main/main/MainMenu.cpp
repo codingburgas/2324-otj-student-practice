@@ -1,7 +1,5 @@
-#include <iostream>
-#include <vector>
-#include <string>
-#include <iomanip>
+
+#include "MainMenu.h"
 
 using namespace std;
 
@@ -10,7 +8,7 @@ int main() {
     mainMenu.push_back("1. Search Cinema");
     mainMenu.push_back("2. Current Movies");
     mainMenu.push_back("3. Cancel Booking");
-    mainMenu.push_back("4. Admin Panel");
+    mainMenu.push_back("4. Account Settings");
     mainMenu.push_back("5. Exit");
 
     int choice;
@@ -20,28 +18,22 @@ int main() {
 
 
     do {
-        // Set the text color to bright blue using ANSI escape sequence
-        cout << "\033[1;94m";
-
-        cout << setw(screenWidth / 2 + 34) << "     ________  _____  _____     ____    ____  _________     _       ______   _________  _____   ______  " << endl;
-        cout << setw(screenWidth / 2 + 34) << "    |_   __  ||_   _||_   _|   |_   \\  /   _||  _   _  |   / \\    .' ____ \\ |  _   _  ||_   _|.' ___  | " << endl;
-        cout << setw(screenWidth / 2 + 34) << "      | |_ \\_|  | |    | |       |   \\/   |  |_/ | | \\_|  / _ \\   | (___ \\_||_/ | | \\_|  | | / .'   \\_| " << endl;
-        cout << setw(screenWidth / 2 + 34) << "      |  _|     | |    | |   _   | |\\  /| |      | |     / ___ \\   _.____`.     | |      | | | |        " << endl;
-        cout << setw(screenWidth / 2 + 34) << "     _| |_     _| |_  _| |__/ | _| |_\\/_| |_    _| |_  _/ /   \\ \\_| \\____) |   _| |_    _| |_\\ `.___.'\\ " << endl;
-        cout << setw(screenWidth / 2 + 34) << "    |_____|   |_____||________||_____||_____|  |_____||____| |____|\\______.'  |_____|  |_____|\`.____ .'" << endl;
-
-        // Reset the text color to the default
-        cout << "\033[0m";
-
-        cout << endl;
-        cout << endl;
-        cout << endl;
+        ascii();
 
         cout << setw(screenWidth / 1.5) << "Please select an option:" << endl;
         cout << endl;
-        cout << setw(screenWidth / 1 + maxOptionLength /1) << left; // Shift menu options to the center and align to the left
+
+        // Find the maximum length of the menu options
         for (const string& option : mainMenu) {
-            cout << option << endl;
+            maxOptionLength = max(maxOptionLength, static_cast<int>(option.length()));
+        }
+
+        // Calculate the spacing required to center the menu options
+        int optionSpacing = (screenWidth - maxOptionLength) / 2;
+
+        // Print the menu options with the calculated spacing
+        for (const string& option : mainMenu) {
+            cout << setw(optionSpacing) << " " << option << endl;
         }
         cout << endl;
         cout << setw(screenWidth / 1.6) << right<< "Enter your choice: ";
@@ -54,7 +46,7 @@ int main() {
             break;
         case 2:
             system("cls");
-            // Code for booking tickets
+            currentmovies();
             break;
         case 3:
             system("cls");
@@ -65,10 +57,12 @@ int main() {
             // Code for admin panel
             break;
         case 5:
-            cout << setw(screenWidth / 2) << "Exiting the program..." << endl;
+            system("CLS");
+            ascii();
+            cout << setw(screenWidth / 1.5) << "Exiting the program..." << endl;
             break;
         default:
-            cout << setw(screenWidth / 2) << "Invalid choice! Please try again." << endl;
+            cout << setw(screenWidth / 1.5) << "Invalid choice! Please try again." << endl;
             break;
         }
 

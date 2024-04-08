@@ -2,6 +2,9 @@
 #ifndef MAINMENU_H
 #define MAINMENU_H
 #include <iostream>
+#include <vector>
+#include <string>
+#include <iomanip>
 using namespace std;
 struct MenuItem {
 	string label;
@@ -18,5 +21,7 @@ void findTrendingMovies();
 void customFunction1();
 void customFunction2();
 void exitProgram();
-
+void ascii();
+int currentmovies();
+int main();
 #endif
