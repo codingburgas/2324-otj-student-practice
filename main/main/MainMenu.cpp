@@ -62,8 +62,16 @@ int main() {
             cout << setw(screenWidth / 1.5) << "Exiting the program..." << endl;
             break;
         default:
+            
+            system("CLS");
+            int main();
+            cout << endl;
+            cout << "\033[1;31m";
             cout << setw(screenWidth / 1.5) << "Invalid choice! Please try again." << endl;
+            cout << "\033[0m";
             break;
+      
+            
         }
 
         cout << endl;
