@@ -10,17 +10,17 @@ void movie1() {
     system("CLS");
     ascii();
     int selection;
-    cout << setw(100) <<  "The Super Mario Bros.Movie" << endl;
-    cout << setw(100) << "2D" << endl;
-    cout << setw(100) << "Projection Time: Every Monday at 4 p.m untill August" << endl;
-    cout << setw(100) << "Release Date: April 5, 2023" << endl;
-    cout << setw(100) << "Directors: Aaron Horvath, Michael Jelenic" << endl;
-    cout << setw(100) << "Main Actor: Chris Pratt (voice)" << endl;
-    cout << setw(100) << "A plumber named Mario travels through an underground labyrinth" << endl;
-    cout << setw(100) << "with his brother, Luigi, trying to save a captured princess." << endl;
+    cout << setw(100) << "" << "The Super Mario Bros.Movie" << endl;
+    cout << setw(100) << "" << "2D" << endl;
+    cout << setw(100) << "" << "Projection Time: Every Monday at 4 p.m untill August" << endl;
+    cout << setw(100) << "" << "Release Date: April 5, 2023" << endl;
+    cout << setw(100) << "" << "Directors: Aaron Horvath, Michael Jelenic" << endl;
+    cout << setw(100) << "" << "Main Actor: Chris Pratt (voice)" << endl;
+    cout << setw(100) << "" << "A plumber named Mario travels through an underground labyrinth" << endl;
+    cout << setw(100) << "" << "with his brother, Luigi, trying to save a captured princess." << endl;
     cout << endl;
     cout << endl;
-    cout << setw(60) << "Press 0 to go back: ";
+    cout << setw(60) << "" << "Press 0 to go back: ";
     cin >> selection;
     if (selection == 0) {
         system("CLS");
