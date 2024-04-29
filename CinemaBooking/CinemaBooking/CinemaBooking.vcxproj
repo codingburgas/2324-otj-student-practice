@@ -127,6 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="burgas.cpp" />
     <ClCompile Include="front-end.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>

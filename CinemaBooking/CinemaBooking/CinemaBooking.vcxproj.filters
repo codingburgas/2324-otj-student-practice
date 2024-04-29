@@ -21,5 +21,8 @@
     <ClCompile Include="front-end.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="burgas.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
