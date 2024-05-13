@@ -95,7 +95,7 @@ void checkFile() {
     inputFile.seekg(0, ios::end);
     if (inputFile.tellg() == 0) {
         system("CLS");
-        cout << setw(choicePos) << "" << "\x1b[31m" << "No student information available. Please register first." << "\x1b[0m" << endl;
+        cout << setw(choicePos) << "" << "\x1b[31m" << "No user information available. Please register first." << "\x1b[0m" << endl;
         main();
     }
     else {

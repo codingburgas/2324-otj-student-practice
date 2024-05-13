@@ -21,4 +21,5 @@ int main();
 void ascii();
 void cinemafinder();
 void checkFile();
+void message();
 #endif

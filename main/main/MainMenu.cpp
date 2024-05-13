@@ -29,14 +29,13 @@ int main() {
             break;
         case 2:
             system("CLS");
-            void checkFile();
-
+            void viralmovies();
             break;
         case 3:
 
         case 4:
             system("CLS");
-  
+            message();
             break;
         case 5:
             system("CLS");
