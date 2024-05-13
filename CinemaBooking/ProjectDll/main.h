@@ -8,5 +8,7 @@
 using namespace std;
 
 int main();
+void menu();
 void Burgas();
+void Varna();
 #endif

@@ -1,29 +1,29 @@
-#include "../ProjectDll/main.h"
 #include "../ProjectDll/front-end.h"
+#include "../ProjectDll/main.h"
 
-void Burgas() {
+void Varna() {
     int choise;
 
     system("cls");
-    string address = "../../FrontEnd-Captions/BurgasCaption.txt";
+    string address = "../../FrontEnd-Captions/VarnaCaption.txt";
     print(address);
-    
+
     cin >> choise;
 
     switch (choise) {
     case 1:
-        //Ghost Busters();
+        //The Godfather();
         break;
     case 2:
-        //Avengers();
+        //Angry Men();
         break;
     case 3:
-        //Dune();
+        //The Dark Knight();
     case 4:
-        //Titanic();   
+        //Pulp Fiction();   
         break;
     case 5:
-        //Abagail();
+        //Fight Club();
     case 6:
         menu();
         break;
@@ -34,5 +34,3 @@ void Burgas() {
     }
 
 }
-
-
