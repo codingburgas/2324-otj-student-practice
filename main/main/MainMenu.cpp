@@ -25,11 +25,10 @@ int main() {
         switch (choice) {
         case 1:
             system("CLS");
-            runcinemafinder();
+            void checkFile();
             break;
         case 2:
             system("CLS");
-
             void checkFile();
 
             break;

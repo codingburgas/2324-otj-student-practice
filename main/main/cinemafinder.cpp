@@ -49,7 +49,7 @@ public:
         cout << setw(centerPos) << "" << "7. Ruse - Mall Rousse" << endl;
     }
 
-    void runcinemafinder() {
+    void cinemafinder() {
         welcome();
         showOptions();
 
@@ -84,7 +84,7 @@ public:
         default:
             system("CLS");
             cout << setw(choicePos) << "" << "\x1b[31m" << "Invalid choice. Please try again." << "\x1b[0m" << endl;
-            runcinemafinder();
+            cinemafinder();
             break;
         }
     }
@@ -101,8 +101,8 @@ void checkFile() {
     else {
         system("CLS");
         string firstName;
-        Dashboard dashboard(firstName);
-        dashboard.runDashboard();
+        CinemaFinder cinemafinder(firstName);
+        cinemafinder.cinemafinder();
     }
     inputFile.close();
 }
