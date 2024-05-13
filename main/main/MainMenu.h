@@ -2,27 +2,24 @@
 #ifndef MAINMENU_H
 #define MAINMENU_H
 #include <iostream>
-#include <vector>
-#include <string>
 #include <iomanip>
+#include <Windows.h>
 #include <fstream>
+#include <ctime>
+#include <string>
+#include <sstream>
+
+
 using namespace std;
-struct MenuItem {
-	string label;
-	void (*action)();
-};
-struct MenuNode {
-	MenuItem data;
-	MenuNode* next;
-};
-void displayMenu(MenuNode* head, int screenWidth);
-void addMenuItem(MenuNode** head, const MenuItem& item);
-void findCity();
-void findTrendingMovies();
-void customFunction1();
-void customFunction2();
-void exitProgram();
-void ascii();
-int currentmovies();
+
+const int WIDTH = 80;
+extern int centerPos;
+extern int choicePos;
+extern int choice;
+
 int main();
+void ascii();
+void cinemafinder();
+void checkFile();
+void runcinemafinder();
 #endif

@@ -1,81 +1,55 @@
 
 #include "MainMenu.h"
 
-using namespace std;
+
+int centerPos = (WIDTH - 5) / 2;
+int choicePos = (WIDTH - 4) / 2;
+int choice;
+
 
 int main() {
-    vector<string> mainMenu;
-    mainMenu.push_back("1. Search Cinema");
-    mainMenu.push_back("2. Current Movies");
-    mainMenu.push_back("3. Cancel Booking");
-    mainMenu.push_back("4. Account Settings");
-    mainMenu.push_back("5. Exit");
-
-    int choice;
-    int screenWidth = 90; // Adjust this value according to your desired screen width
-    int maxOptionLength = 0;
-
-
-
     do {
         ascii();
 
-        cout << setw(screenWidth / 1.5) << "Please select an option:" << endl;
+        cout << setw(choicePos) << "" << "Select Your Opiton" << endl;
         cout << endl;
-
-        // Find the maximum length of the menu options
-        for (const string& option : mainMenu) {
-            maxOptionLength = max(maxOptionLength, static_cast<int>(option.length()));
-        }
-
-        // Calculate the spacing required to center the menu options
-        int optionSpacing = (screenWidth - maxOptionLength) / 2;
-
-        // Print the menu options with the calculated spacing
-        for (const string& option : mainMenu) {
-            cout << setw(optionSpacing) << " " << option << endl;
-        }
+        cout << setw(centerPos) << "" << "1. Cinema Finder" << endl;
+        cout << setw(centerPos) << "" << "2. Viral Movies" << endl;
+        cout << setw(centerPos) << "" << "3. User Dashboard" << endl;
+        cout << setw(centerPos) << "" << "4. Open Ticket" << endl;
+        cout << setw(centerPos) << "" << "5. Exit" << endl;
         cout << endl;
-        cout << setw(screenWidth / 1.6) << right<< "Enter your choice: ";
+        cout << setw(choicePos) << "" << "Enter your choice: ";
         cin >> choice;
 
         switch (choice) {
         case 1:
-            system("cls");
-            // Code for searching movies
+            system("CLS");
+            runcinemafinder();
             break;
         case 2:
-            system("cls");
-            currentmovies();
+            system("CLS");
+
+            void checkFile();
+
             break;
         case 3:
-            system("cls");
-            // Code for canceling booking
-            break;
+
         case 4:
-            system("cls");
-            // Code for admin panel
+            system("CLS");
+  
             break;
         case 5:
             system("CLS");
             ascii();
-            cout << setw(screenWidth / 1.5) << "Exiting the program..." << endl;
+            cout << setw(centerPos) << "" << "Exiting program..." << endl;
+            exit(0);
             break;
         default:
-            
             system("CLS");
-            int main();
+            cout << "\x1b[31m" << setw(centerPos) << "" << "Invalid choice. Try again." << "\x1b[37m" << endl;
             cout << endl;
-            cout << "\033[1;31m";
-            cout << setw(screenWidth / 1.5) << "Invalid choice! Please try again." << endl;
-            cout << "\033[0m";
-            break;
-      
-            
+            main();
         }
-
-        cout << endl;
     } while (choice != 5);
-
-    return 0;
 }

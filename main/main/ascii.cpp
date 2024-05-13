@@ -2,7 +2,6 @@
 void ascii() {
 
 
-	// Set the text color to bright blue using ANSI escape sequence
 	cout << "\u001b[34;1m";
 	
 
