@@ -129,6 +129,7 @@
   <ItemGroup>
     <ClCompile Include="burgas.cpp" />
     <ClCompile Include="front-end.cpp" />
+    <ClCompile Include="login.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="menu.cpp" />
     <ClCompile Include="varna.cpp" />

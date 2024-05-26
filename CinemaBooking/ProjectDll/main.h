@@ -11,4 +11,5 @@ int main();
 void menu();
 void Burgas();
 void Varna();
+void login();
 #endif

@@ -5,5 +5,5 @@
 #include "../ProjectDll/main.h"
 
 int main() {
-	menu();
+	login();	
 }
