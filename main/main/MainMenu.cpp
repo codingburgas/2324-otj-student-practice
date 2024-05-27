@@ -25,14 +25,17 @@ int main() {
         switch (choice) {
         case 1:
             system("CLS");
-            void checkFile();
+            checkFile();
+            void cinemafinder();
             break;
         case 2:
             system("CLS");
             void viralmovies();
             break;
         case 3:
-
+            system("CLS");
+            void reg();
+            break;
         case 4:
             system("CLS");
             message();

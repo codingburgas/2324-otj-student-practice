@@ -5,7 +5,7 @@ void message() {
         ascii();
         int newPos = (WIDTH - 4) / 1.5;
 
-        cout << setw(newPos) << "" << "Our available support" << endl;
+        cout << setw(choicePos) << "" << "Our available support" << endl;
         cout << endl;
         cout << setw(centerPos) << "" << "1. Teodor Madzharov - App Support" << endl;
 

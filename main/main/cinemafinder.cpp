@@ -91,7 +91,7 @@ public:
 
 };
 void checkFile() {
-    ifstream inputFile("../students.txt");
+    ifstream inputFile("../logins.txt");
     inputFile.seekg(0, ios::end);
     if (inputFile.tellg() == 0) {
         system("CLS");
@@ -103,6 +103,7 @@ void checkFile() {
         string firstName;
         CinemaFinder cinemafinder(firstName);
         cinemafinder.cinemafinder();
+        
     }
     inputFile.close();
 }

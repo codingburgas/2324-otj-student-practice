@@ -22,4 +22,5 @@ void ascii();
 void cinemafinder();
 void checkFile();
 void message();
+void reg();
 #endif
