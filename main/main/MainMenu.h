@@ -23,4 +23,5 @@ void cinemafinder();
 void checkFile();
 void message();
 void reg();
+void viralmovies();
 #endif

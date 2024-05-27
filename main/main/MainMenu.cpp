@@ -30,11 +30,11 @@ int main() {
             break;
         case 2:
             system("CLS");
-            void viralmovies();
+            main();
             break;
         case 3:
             system("CLS");
-            void reg();
+            reg();
             break;
         case 4:
             system("CLS");

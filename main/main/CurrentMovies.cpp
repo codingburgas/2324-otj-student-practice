@@ -29,7 +29,7 @@ void movie1() {
 }
 
 int currentmovies() {
-    int screenWidth = 80; // Adjust this value according to your desired screen width
+    int screenWidth = 80;
     ascii();
     cout << setw(screenWidth / 1.6) << "Current movies ";
     cout << endl;
