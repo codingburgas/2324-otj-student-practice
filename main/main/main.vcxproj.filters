@@ -36,6 +36,12 @@
     <ClCompile Include="message.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="cities.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Movies.h">
+      <Filter>Header Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MainMenu.h">

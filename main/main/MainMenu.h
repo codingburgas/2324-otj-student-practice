@@ -8,6 +8,7 @@
 #include <ctime>
 #include <string>
 #include <sstream>
+#include <vector>
 
 
 using namespace std;
@@ -24,4 +25,5 @@ void checkFile();
 void message();
 void reg();
 void viralmovies();
+void currentmovies();
 #endif

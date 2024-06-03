@@ -38,7 +38,7 @@ public:
     }
     void showOptions() {
 
-        cout << setw(choicePos) << "" << "Our Cinemas : " << firstName << endl;
+        cout << setw(choicePos) << "" << "Our Cinemas: "<< endl;
         cout << endl;
         cout << setw(centerPos) << "" << "1. Sofia - Paradise Mall" << endl;
         cout << setw(centerPos) << "" << "2. Sofia - Sofia Mall" << endl;
@@ -55,10 +55,14 @@ public:
 
         int choice;
         cout << endl;
-        cout << setw(choicePos) << "" << "Enter your choice: ";
+        cout << setw(choicePos) << "" << "Enter your choice or press 0 to go back: ";
         cin >> choice;
 
         switch (choice) {
+        case 0:
+            system("CLS");
+            main();
+            break;
         case 1:
             system("CLS");
             break;

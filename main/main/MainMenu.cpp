@@ -30,7 +30,7 @@ int main() {
             break;
         case 2:
             system("CLS");
-            main();
+            currentmovies();
             break;
         case 3:
             system("CLS");

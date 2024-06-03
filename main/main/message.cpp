@@ -10,7 +10,7 @@ void message() {
         cout << setw(centerPos) << "" << "1. Teodor Madzharov - App Support" << endl;
 
         cout << endl;
-        cout << setw(choicePos) << "" << "Enter your choice or press 0 to return: ";
+        cout << setw(35) << "" << "Enter your choice or press 0 to return: ";
         cin >> choice;
 
         switch (choice) {
