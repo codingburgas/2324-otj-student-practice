@@ -5,7 +5,8 @@ using namespace std;
 void currentmovies() {
     int screenWidth = 80;
     ascii();
-    cout << setw(55) << "Current movies ";
+    cout << setw(55) << "Current movies:";
+    cout << endl;
     cout << endl;
     ifstream file("../movies.txt");
 
@@ -15,7 +16,7 @@ void currentmovies() {
     }
     file.close();
     cout << endl;
-    cout << "Enter your choice or press 0 to go back: ";
+    cout  << setw(30) << " " << "Enter your choice or press 0 to go back: ";
     int choicem;
     cin >> choicem;
 
@@ -50,7 +51,7 @@ void currentmovies() {
     }
     else {
         system("CLS");
-        cout << setw(40) << "Invalid choice!" << endl;
+        cout << setw(55) << "\033[91m" << "Invalid choice!" << "\033[0m" << endl;
         currentmovies();
 
 
