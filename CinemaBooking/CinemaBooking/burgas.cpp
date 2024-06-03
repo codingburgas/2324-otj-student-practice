@@ -12,7 +12,7 @@ void Burgas() {
 
     switch (choise) {
     case 1:
-        //Ghost Busters();
+        //GhostBusters();
         break;
     case 2:
         //Avengers();

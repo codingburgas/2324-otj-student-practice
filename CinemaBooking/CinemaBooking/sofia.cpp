@@ -12,18 +12,18 @@ void Sofia() {
 
     switch (choise) {
     case 1:
-        //The Godfather();
+        //Godzilla();
         break;
     case 2:
-        //Angry Men();
+        //ColorsOfEvil();
         break;
     case 3:
-        //The Dark Knight();
+        //Ouija();
     case 4:
-        //Pulp Fiction();   
+        //IrishWish();   
         break;
     case 5:
-        //Fight Club();
+        //TheCroods();
     case 6:
         menu();
         break;

@@ -20,7 +20,7 @@ void menu() {
         Varna();
         break;
     case 3:
-       //Sofia();
+       Sofia();
         cout << endl;
       
         break;

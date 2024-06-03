@@ -12,18 +12,18 @@ void Varna() {
 
     switch (choise) {
     case 1:
-        //The Godfather();
+        //TheGodfather();
         break;
     case 2:
-        //Angry Men();
+        //AngryMen();
         break;
     case 3:
-        //The Dark Knight();
+        //TheDarkKnight();
     case 4:
-        //Pulp Fiction();   
+        //PulpFiction();   
         break;
     case 5:
-        //Fight Club();
+        //FightClub();
     case 6:
         menu();
         break;
