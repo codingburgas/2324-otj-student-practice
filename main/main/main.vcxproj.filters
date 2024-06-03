@@ -42,6 +42,9 @@
     <ClCompile Include="Movies.h">
       <Filter>Header Files</Filter>
     </ClCompile>
+    <ClCompile Include="moviesinfo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MainMenu.h">

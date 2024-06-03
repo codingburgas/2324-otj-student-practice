@@ -1,4 +1,5 @@
 #include "MainMenu.h"
+#include "Movies.h"
 using namespace std;
 
 
@@ -25,7 +26,7 @@ void currentmovies() {
         main();
     }
     else if (choicem == 1) {
-        //movie1();
+        movie1();
     }
     else if (choicem == 2) {
         //movie2();

@@ -135,6 +135,7 @@
     <ClCompile Include="MainMenu.cpp" />
     <ClCompile Include="message.cpp" />
     <ClCompile Include="Movies.h" />
+    <ClCompile Include="moviesinfo.cpp" />
     <ClCompile Include="register.cpp" />
   </ItemGroup>
   <ItemGroup>
