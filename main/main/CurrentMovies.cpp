@@ -29,22 +29,22 @@ void currentmovies() {
         movie1();
     }
     else if (choicem == 2) {
-        //movie2();
+        movie2();
     }
     else if (choicem == 3) {
-       // movie3();
+        movie3();
     }
     else if (choicem == 4) {
-       // movie4();
+       movie4();
     }
     else if (choicem == 5) {
-       // movie5();
+       movie5();
     }
     else if (choicem == 6) {
-       // movie6();
+       movie6();
     }
     else if (choicem == 7) {
-       // movie7();
+       movie7();
     }
     else if (choicem == 0) {
         system("CLS");
