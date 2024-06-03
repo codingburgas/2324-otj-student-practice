@@ -29,8 +29,9 @@ void Burgas() {
         break;
     default:
 
-        cout << "Invalid choice. Please enter a number between [1, 2, 3 ...]";
-        break;
+        cout << setw(150) << "Invalid choice. Please enter a number between [1, 2, 3 ...]";
+        
+        Burgas();
     }
 
 }
