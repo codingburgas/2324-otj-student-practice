@@ -1,2 +1,7 @@
 ivo 123
 mazna 123
+a 1
+p 3
+o 3
+l 2
+k 2
