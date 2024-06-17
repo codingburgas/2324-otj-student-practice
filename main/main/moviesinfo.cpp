@@ -9,7 +9,7 @@ void movie1() {
     cout << setw(55) << "Selected movie:";
     cout << endl;
     cout << endl;
-    ifstream file("../movie1.txt");
+    ifstream file("../moviesinfo/movie1.txt");
 
     string line;
     while (getline(file, line)) {
@@ -37,7 +37,7 @@ void movie2() {
     cout << setw(55) << "Selected movie:";
     cout << endl;
     cout << endl;
-    ifstream file("../movie2.txt");
+    ifstream file("../../movie2.txt");
 
     string line;
     while (getline(file, line)) {

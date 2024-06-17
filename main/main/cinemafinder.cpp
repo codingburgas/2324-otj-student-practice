@@ -1,5 +1,4 @@
 #include "MainMenu.h"
-
 class CinemaFinder {
 private:
 
@@ -58,38 +57,14 @@ public:
         cout << setw(choicePos) << "" << "Enter your choice or press 0 to go back: ";
         cin >> choice;
 
-        switch (choice) {
-        case 0:
+        if (choice == 1 || 2 || 3 || 4 || 5 || 6 || 7) {
             system("CLS");
-            main();
-            break;
-        case 1:
-            system("CLS");
-            break;
-        case 2:
-            system("CLS");
-            break;
-        case 3:
-            system("CLS");
-            break;
-        case 4:
-            system("CLS");
-            break;
-        case 5:
-            system("CLS");
-            break;
-        case 6:
-            system("CLS");
-            break;
-        case 7:
-            system("CLS");
-            main();
-            break;
-        default:
+            void city();
+        }
+        else {
             system("CLS");
             cout << setw(choicePos) << "" << "\x1b[31m" << "Invalid choice. Please try again." << "\x1b[0m" << endl;
             cinemafinder();
-            break;
         }
     }
 

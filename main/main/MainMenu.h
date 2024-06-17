@@ -26,4 +26,5 @@ void message();
 void reg();
 void viralmovies();
 void currentmovies();
+void city();
 #endif
