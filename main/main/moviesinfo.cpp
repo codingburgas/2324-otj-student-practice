@@ -37,7 +37,7 @@ void movie2() {
     cout << setw(55) << "Selected movie:";
     cout << endl;
     cout << endl;
-    ifstream file("../../movie2.txt");
+    ifstream file("../moviesinfo/movie2.txt");
 
     string line;
     while (getline(file, line)) {
@@ -64,7 +64,7 @@ void movie3() {
     cout << setw(55) << "Selected movie:";
     cout << endl;
     cout << endl;
-    ifstream file("../movie3.txt");
+    ifstream file("../moviesinfo/movie3.txt");
 
     string line;
     while (getline(file, line)) {
@@ -91,7 +91,7 @@ void movie4() {
     cout << setw(55) << "Selected movie:";
     cout << endl;
     cout << endl;
-    ifstream file("../movie4.txt");
+    ifstream file("../moviesinfo/movie4.txt");
 
     string line;
     while (getline(file, line)) {
@@ -118,7 +118,7 @@ void movie5() {
     cout << setw(55) << "Selected movie:";
     cout << endl;
     cout << endl;
-    ifstream file("../movie5.txt");
+    ifstream file("../moviesinfo/movie5.txt");
 
     string line;
     while (getline(file, line)) {
@@ -146,7 +146,7 @@ void movie6() {
     cout << setw(55) << "Selected movie:";
     cout << endl;
     cout << endl;
-    ifstream file("../movie6.txt");
+    ifstream file("../moviesinfo/movie6.txt");
 
     string line;
     while (getline(file, line)) {
@@ -175,7 +175,7 @@ void movie7() {
     cout << setw(55) << "Selected movie:";
     cout << endl;
     cout << endl;
-    ifstream file("../movie7.txt");
+    ifstream file("../moviesinfo/movie7.txt");
 
     string line;
     while (getline(file, line)) {
