@@ -57,7 +57,7 @@ bool selectSeat(bool seats[ROWS][SEATS_PER_ROW], int& row, int& seat) {
 }
 
 void cinemaBook() {
-    ascii(); // Assuming this function is defined in one of your header files
+    ascii();
     const double ADULT_PRICE = 12.0;
     const double CHILD_PRICE = 8.0;
     vector<Ticket> tickets;
@@ -70,7 +70,9 @@ void cinemaBook() {
         cout << setw(40) << "" << "1. Adult - $" << ADULT_PRICE << endl;
         cout << setw(40) << "" << "2. Child - $" << CHILD_PRICE << endl;
         cout << setw(40) << "" << "3. Finish and calculate total" << endl;
+        cout << endl;
         int choice;
+        cout << setw(40) << "" << "Enter your choice: ";
         cin >> choice;
         if (choice == 3) break;
         if (choice != 1 && choice != 2) {
