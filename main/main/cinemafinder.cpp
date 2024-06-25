@@ -60,7 +60,7 @@ public:
 
         if (choice >= 1 && choice <= 7) {
             system("CLS");
-            cinemaBook();
+            selectmovie();
         }
         else {
             system("CLS");

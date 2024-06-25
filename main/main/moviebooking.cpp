@@ -115,11 +115,3 @@ void cinemaBook() {
     }
     cout << setw(40) << "" << "Total Price: $" << totalPrice << endl;
 }
-
-// Assuming you have a main function in another file, it would look something like this:
-/*
-int main() {
-    cinemaBook();
-    return 0;
-}
-*/

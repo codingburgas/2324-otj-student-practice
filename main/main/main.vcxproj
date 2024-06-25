@@ -137,6 +137,7 @@
     <ClCompile Include="Movies.h" />
     <ClCompile Include="moviesinfo.cpp" />
     <ClCompile Include="register.cpp" />
+    <ClCompile Include="selectmovie.cpp" />
     <ClCompile Include="TicketPurch.h" />
   </ItemGroup>
   <ItemGroup>
