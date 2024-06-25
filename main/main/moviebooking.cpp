@@ -34,22 +34,27 @@ void displaySeats(bool seats[ROWS][SEATS_PER_ROW]) {
 }
 
 bool selectSeat(bool seats[ROWS][SEATS_PER_ROW], int& row, int& seat) {
+    cout << endl;
     char rowChar;
-    cout << setw(40) << "" << "Enter row (A-F): ";
+    cout << setw(45) << "" << "Enter row (A-F): ";
     cin >> rowChar;
     row = toupper(rowChar) - 'A';
 
-    cout << setw(40) << "" << "Enter seat number (1-10): ";
+    cout << setw(45) << "" << "Enter seat number (1-10): ";
     cin >> seat;
     seat--; // Convert to 0-based index
 
     if (row < 0 || row >= ROWS || seat < 0 || seat >= SEATS_PER_ROW) {
+        system("CLS");
         cout << setw(40) << "" << "\033[1;31mInvalid seat selection.\033[0m" << endl;
+        cinemaBook();
         return false;
     }
 
     if (seats[row][seat]) {
+        system("CLS");
         cout << setw(40) << "" << "\033[1;31mSeat already occupied.\033[0m" << endl;
+        cinemaBook();
         return false;
     }
 
@@ -58,7 +63,6 @@ bool selectSeat(bool seats[ROWS][SEATS_PER_ROW], int& row, int& seat) {
 }
 
 void cinemaBook() {
-    ascii();
     const double ADULT_PRICE = 12.0;
     const double CHILD_PRICE = 8.0;
     vector<Ticket> tickets;
@@ -66,6 +70,8 @@ void cinemaBook() {
     bool seats[ROWS][SEATS_PER_ROW] = { false };
 
     while (true) {
+        system("CLS");
+        ascii();
         cout << setw(40) << "" << "Select the category of the ticket:" << endl;
         cout << endl;
         cout << setw(40) << "" << "1. Adult - $" << ADULT_PRICE << endl;
@@ -73,12 +79,19 @@ void cinemaBook() {
         cout << setw(40) << "" << "3. Finish and calculate total" << endl;
         cout << endl;
         int choice;
-        cout << setw(40) << "" << "Enter your choice: ";
+        cout << setw(38) << "" << "Enter your choice or press 0 to home: ";
         cin >> choice;
-        if (choice == 3) break;
+        if (choice == 0) {
+            system("CLS");
+            main();
+        }
+        if (choice == 3) {
+            main();
+        }
         if (choice != 1 && choice != 2) {
+            system("CLS");
             cout << setw(40) << "" << "\033[1;31mInvalid choice. Please try again.\033[0m" << endl;
-            continue;
+            cinemaBook();
         }
         system("CLS");
         ascii();
@@ -86,8 +99,9 @@ void cinemaBook() {
         int count;
         cin >> count;
         if (count < 0) {
+            system("CLS");
             cout << setw(40) << "" << "\033[1;31mInvalid number. Please enter a non-negative number.\033[0m" << endl;
-            continue;
+            cinemaBook();
         }
 
         for (int i = 0; i < count; i++) {
@@ -107,15 +121,14 @@ void cinemaBook() {
             totalPrice += (choice == 1) ? ADULT_PRICE : CHILD_PRICE;
         }
     }
-
-    system("CLS");
-    cout << endl;
-    cout << setw(40) << "" << "Booking Summary" << endl;
-    cout << endl;
-    for (const auto& ticket : tickets) {
-        cout << setw(40) << "" << (ticket.isAdult ? "Adult" : "Child") << " ticket: Row "
-            << char('A' + ticket.row) << ", Seat " << (ticket.seat + 1)
-            << " - $" << (ticket.isAdult ? ADULT_PRICE : CHILD_PRICE) << endl;
+        system("CLS");
+        cout << endl;
+        cout << setw(40) << "" << "Booking Summary" << endl;
+        cout << endl;
+        for (const auto& ticket : tickets) {
+            cout << setw(40) << "" << (ticket.isAdult ? "Adult" : "Child") << " ticket: Row "
+                << char('A' + ticket.row) << ", Seat " << (ticket.seat + 1)
+                << " - $" << (ticket.isAdult ? ADULT_PRICE : CHILD_PRICE) << endl;
+        }
+        cout << setw(40) << "" << "Total Price: $" << totalPrice << endl;
     }
-    cout << setw(40) << "" << "Total Price: $" << totalPrice << endl;
-}
