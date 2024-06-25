@@ -11,7 +11,7 @@ int main() {
     do {
         ascii();
 
-        cout << setw(choicePos) << "" << "Select Your Opiton" << endl;
+        cout << setw(choicePos) << "" << "Select Your Option" << endl;
         cout << endl;
         cout << setw(centerPos) << "" << "1. Cinema Finder" << endl;
         cout << setw(centerPos) << "" << "2. Viral Movies" << endl;

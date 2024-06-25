@@ -11,6 +11,7 @@ struct Ticket {
 };
 
 void displaySeats(bool seats[ROWS][SEATS_PER_ROW]) {
+    ascii();
     cout << setw(40) << "" << "+----------------------------+" << endl;
     cout << setw(40) << "" << "|        CINEMA SCREEN       |" << endl;
     cout << setw(40) << "" << "+====+======================++" << endl;
@@ -80,6 +81,7 @@ void cinemaBook() {
             continue;
         }
         system("CLS");
+        ascii();
         cout << setw(40) << "" << "Enter the number of tickets: ";
         int count;
         cin >> count;

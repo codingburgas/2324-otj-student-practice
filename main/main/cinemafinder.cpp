@@ -62,6 +62,10 @@ public:
             system("CLS");
             selectmovie();
         }
+        if (choice == 0) {
+            system("CLS");
+               main();
+        }
         else {
             system("CLS");
             cout << setw(choicePos) << "" << "\x1b[31m" << "Invalid choice. Please try again." << "\x1b[0m" << endl;

@@ -23,7 +23,13 @@ void selectmovie() {
             system("CLS");
             cinemaBook();
         }
+        if (choicen == 0) {
+            system("CLS");
+            main();
+        }
+        else{
             system("CLS");
             cout << setw(55) << "\033[91m" << "Invalid choice!" << "\033[0m" << endl;
             currentmovies();
+        }
         }
