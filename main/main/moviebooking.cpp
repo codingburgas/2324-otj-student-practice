@@ -86,7 +86,7 @@ void cinemaBook() {
             main();
         }
         if (choice == 3) {
-            main();
+            continue;
         }
         if (choice != 1 && choice != 2) {
             system("CLS");
