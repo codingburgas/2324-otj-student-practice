@@ -1,4 +1,5 @@
 #include "MainMenu.h"
+#include "TicketPurch.h"
 class CinemaFinder {
 private:
 
@@ -57,9 +58,9 @@ public:
         cout << setw(choicePos) << "" << "Enter your choice or press 0 to go back: ";
         cin >> choice;
 
-        if (choice == 1 || 2 || 3 || 4 || 5 || 6 || 7) {
+        if (choice >= 1 && choice <= 7) {
             system("CLS");
-            void city();
+            cinemaBook();
         }
         else {
             system("CLS");

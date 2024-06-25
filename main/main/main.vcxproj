@@ -129,7 +129,7 @@
   <ItemGroup>
     <ClCompile Include="ascii.cpp" />
     <ClCompile Include="cinemafinder.cpp" />
-    <ClCompile Include="cities.cpp" />
+    <ClCompile Include="moviebooking.cpp" />
     <ClCompile Include="CurrentMovies.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MainMenu.cpp" />
