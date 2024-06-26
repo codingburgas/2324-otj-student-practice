@@ -1,6 +1,4 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/pXN_QAqQ)
-# 2223-10: On the job training (OTJ) project
-
+<img width="45%" src="./assets/logo.png"/>
 # Filmtastic
 
 Filmtastic is a C++ console application that allows users to book movie tickets. Users can buy tickets with card or cash, open tickets, manage tickets, see the viral movies, and cancel bookings. Admin access is available to edit or add movies.
