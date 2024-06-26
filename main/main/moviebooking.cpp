@@ -1,8 +1,12 @@
 #include "MainMenu.h"
 #include "TicketPurch.h"
 
+using namespace std;
+
 const int ROWS = 6;
 const int SEATS_PER_ROW = 10;
+const double ADULT_PRICE = 12.0;
+const double CHILD_PRICE = 8.0;
 
 struct Ticket {
     bool isAdult;
@@ -47,14 +51,12 @@ bool selectSeat(bool seats[ROWS][SEATS_PER_ROW], int& row, int& seat) {
     if (row < 0 || row >= ROWS || seat < 0 || seat >= SEATS_PER_ROW) {
         system("CLS");
         cout << setw(40) << "" << "\033[1;31mInvalid seat selection.\033[0m" << endl;
-        cinemaBook();
         return false;
     }
 
     if (seats[row][seat]) {
         system("CLS");
         cout << setw(40) << "" << "\033[1;31mSeat already occupied.\033[0m" << endl;
-        cinemaBook();
         return false;
     }
 
@@ -62,9 +64,101 @@ bool selectSeat(bool seats[ROWS][SEATS_PER_ROW], int& row, int& seat) {
     return true;
 }
 
+void displaySummary(const vector<Ticket>& tickets, double totalPrice) {
+    cout << endl;
+    cout << setw(40) << "" << "Booking Summary" << endl;
+    cout << endl;
+    for (const auto& ticket : tickets) {
+        cout << setw(40) << "" << (ticket.isAdult ? "Adult" : "Child") << " ticket: Row "
+            << char('A' + ticket.row) << ", Seat " << (ticket.seat + 1)
+            << " - $" << (ticket.isAdult ? ADULT_PRICE : CHILD_PRICE) << endl;
+    }
+    cout << setw(40) << "" << "Total Price: $" << totalPrice << endl;
+    cout << endl;
+    cout << setw(40) << "" << "Press any key to continue...";
+    cin.ignore();
+    cin.get();
+}
+
+void processPayment(double totalPrice, const vector<Ticket>& tickets) {
+    while (true) {
+        system("CLS");
+        ascii();
+        cout << setw(40) << "" << "Choose your payment method:" << endl;
+        cout << endl;
+        cout << setw(40) << "" << "1. Cash" << endl;
+        cout << setw(40) << "" << "2. Card" << endl;
+        cout << endl;
+        int paymentChoice;
+        cout << setw(40) << "" << "Enter your choice: ";
+        cin >> paymentChoice;
+
+        if (paymentChoice == 1) {
+            // Cash payment
+            system("CLS");
+            displaySummary(tickets, totalPrice);
+            break;
+        }
+        else if (paymentChoice == 2) {
+            // Card payment
+            string cardNumber, expiryDate, cvv;
+
+            while (true) {
+                system("CLS");
+                ascii();
+                cout << setw(40) << "" << "Enter card details:" << endl;
+                cout << endl;
+                cout << setw(40) << "" << "Card Number (16 digits): ";
+                cin >> cardNumber;
+                cout << setw(40) << "" << "Expiry Date (MM/YY): ";
+                cin >> expiryDate;
+                cout << setw(40) << "" << "CVV (3 digits): ";
+                cin >> cvv;
+
+                // Validate card details
+                bool isValid = true;
+                if (cardNumber.length() != 16 || !all_of(cardNumber.begin(), cardNumber.end(), ::isdigit)) {
+                    cout << setw(40) << "" << "\033[1;31mInvalid card number.\033[0m" << endl;
+                    isValid = false;
+                }
+                if (expiryDate.length() != 5 || expiryDate[2] != '/' ||
+                    !isdigit(expiryDate[0]) || !isdigit(expiryDate[1]) ||
+                    !isdigit(expiryDate[3]) || !isdigit(expiryDate[4])) {
+                    cout << setw(40) << "" << "\033[1;31mInvalid expiry date.\033[0m" << endl;
+                    isValid = false;
+                }
+                if (cvv.length() != 3 || !all_of(cvv.begin(), cvv.end(), ::isdigit)) {
+                    cout << setw(40) << "" << "\033[1;31mInvalid CVV.\033[0m" << endl;
+                    isValid = false;
+                }
+
+                if (isValid) {
+                    system("CLS");
+                    cout << setw(40) << "" << "\033[1;32mPayment processed successfully.\033[0m" << endl;
+                    displaySummary(tickets, totalPrice);
+                    break;
+                }
+                else {
+                    cout << endl;
+                    cout << setw(40) << "" << "Press any key to try again...";
+                    cin.ignore();
+                    cin.get();
+                }
+            }
+            break;
+        }
+        else {
+            ascii();
+            cout << setw(40) << "" << "\033[1;31mInvalid choice. Please try again.\033[0m" << endl;
+            cout << endl;
+            cout << setw(40) << "" << "Press any key to continue...";
+            cin.ignore();
+            cin.get();
+        }
+    }
+}
+
 void cinemaBook() {
-    const double ADULT_PRICE = 12.0;
-    const double CHILD_PRICE = 8.0;
     vector<Ticket> tickets;
     double totalPrice = 0.0;
     bool seats[ROWS][SEATS_PER_ROW] = { false };
@@ -84,14 +178,15 @@ void cinemaBook() {
         if (choice == 0) {
             system("CLS");
             main();
+            return;
         }
         if (choice == 3) {
-            continue;
+            break;
         }
         if (choice != 1 && choice != 2) {
             system("CLS");
             cout << setw(40) << "" << "\033[1;31mInvalid choice. Please try again.\033[0m" << endl;
-            cinemaBook();
+            continue;
         }
         system("CLS");
         ascii();
@@ -101,7 +196,7 @@ void cinemaBook() {
         if (count < 0) {
             system("CLS");
             cout << setw(40) << "" << "\033[1;31mInvalid number. Please enter a non-negative number.\033[0m" << endl;
-            cinemaBook();
+            continue;
         }
 
         for (int i = 0; i < count; i++) {
@@ -121,14 +216,6 @@ void cinemaBook() {
             totalPrice += (choice == 1) ? ADULT_PRICE : CHILD_PRICE;
         }
     }
-        system("CLS");
-        cout << endl;
-        cout << setw(40) << "" << "Booking Summary" << endl;
-        cout << endl;
-        for (const auto& ticket : tickets) {
-            cout << setw(40) << "" << (ticket.isAdult ? "Adult" : "Child") << " ticket: Row "
-                << char('A' + ticket.row) << ", Seat " << (ticket.seat + 1)
-                << " - $" << (ticket.isAdult ? ADULT_PRICE : CHILD_PRICE) << endl;
-        }
-        cout << setw(40) << "" << "Total Price: $" << totalPrice << endl;
-    }
+
+    processPayment(totalPrice, tickets);
+}

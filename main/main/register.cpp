@@ -1,6 +1,5 @@
 #include "MainMenu.h"
 #include "Register.h"
-using namespace std;
 
 void displayErrorMessage(const string& message) {
     cout << "\x1b[31m" << setw(centerPos) << "" << message << "\x1b[0m" << endl;
