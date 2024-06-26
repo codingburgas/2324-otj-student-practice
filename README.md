@@ -1,4 +1,4 @@
-<img width="45%" src="../assets/images/logo.png"/>
+
 # Filmtastic
 
 Filmtastic is a C++ console application that allows users to book movie tickets. Users can buy tickets with card or cash, open tickets, manage tickets, see the viral movies, and cancel bookings. Admin access is available to edit or add movies.
