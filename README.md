@@ -1,5 +1,4 @@
-
-# Filmtastic
+<img style="width: 45%;" src="https://media.discordapp.net/attachments/1109840109207040142/1255466942681317428/logo-removebg-preview.png?ex=667d3c34&is=667beab4&hm=61ee6eeb23b691b45f8297e053a308d8cc4c1602b99c32941176f31945e14095&=&format=webp&quality=lossless" alt="Filmtastic">
 
 Filmtastic is a C++ console application that allows users to book movie tickets. Users can buy tickets with card or cash, open tickets, manage tickets, see the viral movies, and cancel bookings. Admin access is available to edit or add movies.
 
