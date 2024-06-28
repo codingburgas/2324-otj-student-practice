@@ -14,6 +14,10 @@ struct Booking {
     int seat;
 };
 
+
+
+
+
 vector<Booking> bookings;
 void cancelbooking() {
     system("CLS");

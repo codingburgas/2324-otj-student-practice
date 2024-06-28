@@ -1,5 +1,6 @@
 #include "MainMenu.h"
 #include "TicketPurch.h"
+#include <fstream>
 
 using namespace std;
 
@@ -46,7 +47,7 @@ bool selectSeat(bool seats[ROWS][SEATS_PER_ROW], int& row, int& seat) {
 
     cout << setw(45) << "" << "Enter seat number (1-10): ";
     cin >> seat;
-    seat--; // Convert to 0-based index
+    seat--;
 
     if (row < 0 || row >= ROWS || seat < 0 || seat >= SEATS_PER_ROW) {
         system("CLS");
@@ -64,6 +65,24 @@ bool selectSeat(bool seats[ROWS][SEATS_PER_ROW], int& row, int& seat) {
     return true;
 }
 
+void saveBookingToFile(const vector<Ticket>& tickets, double totalPrice) {
+    ofstream outFile("booking_summary.txt");
+    if (outFile.is_open()) {
+        outFile << "Booking Summary\n\n";
+        for (const auto& ticket : tickets) {
+            outFile << (ticket.isAdult ? "Adult" : "Child") << " ticket: Row "
+                << char('A' + ticket.row) << ", Seat " << (ticket.seat + 1)
+                << " - $" << (ticket.isAdult ? ADULT_PRICE : CHILD_PRICE) << "\n";
+        }
+        outFile << "Total Price: $" << totalPrice << "\n";
+        outFile.close();
+        cout << setw(40) << "" << "Booking summary saved to booking_summary.txt\n";
+    }
+    else {
+        cout << setw(40) << "" << "\033[1;31mError saving booking summary to file.\033[0m\n";
+    }
+}
+
 void displaySummary(const vector<Ticket>& tickets, double totalPrice) {
     cout << endl;
     cout << setw(40) << "" << "Booking Summary" << endl;
@@ -78,6 +97,9 @@ void displaySummary(const vector<Ticket>& tickets, double totalPrice) {
     cout << setw(40) << "" << "Press any key to continue...";
     cin.ignore();
     cin.get();
+
+    // Save booking summary to file
+    saveBookingToFile(tickets, totalPrice);
 }
 
 void processPayment(double totalPrice, const vector<Ticket>& tickets) {
