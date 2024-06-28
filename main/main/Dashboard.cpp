@@ -16,8 +16,6 @@ struct Booking {
 
 
 
-
-
 vector<Booking> bookings;
 void cancelbooking() {
     system("CLS");
@@ -120,8 +118,18 @@ void changeSeats() {
     cout << setw(40) << "" << "Seat change functionality to be implemented." << endl;
     system("pause");
 }
+void dashboard() {
+    ifstream inputFile("../logins.txt");
+    inputFile.seekg(0, ios::end);
+    if (inputFile.tellg() == 0) {
+        system("CLS");
+        cout << setw(choicePos) << "" << "\x1b[31m" << "No user information available. Please register first." << "\x1b[0m" << endl;
+        main();
+    }
+    else {
+        system("CLS");
+        displayDashboard();
 
-int dashboard() {
-    displayDashboard();
-    return 0;
+    }
+    inputFile.close();
 }
