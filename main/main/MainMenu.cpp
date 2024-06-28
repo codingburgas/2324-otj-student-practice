@@ -43,7 +43,7 @@ int main() {
             break;
         case 5:
             system("CLS");
-            ascii();
+            dashboard();
             break;
         case 6:
             system("CLS");

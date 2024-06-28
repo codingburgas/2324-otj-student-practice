@@ -12,3 +12,7 @@
 using namespace std;
 void cinemaBook();
 void selectmovie();
+void userDashboard();
+void adminDashboard();
+void cancelBooking();
+void changeSeats();
