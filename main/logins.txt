@@ -1,2 +1,1 @@
-sTeodor,Madzharov,gdffdsfds,342324324342,23
-tE,ER,342423,234234242,23
+Teodor,M,tsmaddzharov21@codingburgas.bg,12345678,12

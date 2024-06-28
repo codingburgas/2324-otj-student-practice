@@ -46,6 +46,10 @@ void displayDashboard() {
         case 2:
         {
             string username, password;
+            system("CLS");
+            ascii();
+            cout << setw(40) << "" << "Admin Dashboard";
+            cout << endl;
             cout << setw(40) << "" << "Enter username: ";
             cin >> username;
             cout << setw(40) << "" << "Enter password: ";
@@ -61,7 +65,7 @@ void displayDashboard() {
         }
         break;
         case 3:
-            return;
+            dashboard();
         default:
             cout << setw(40) << "" << "\033[1;31mInvalid choice. Please try again.\033[0m" << endl;
             system("pause");
