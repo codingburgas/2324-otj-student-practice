@@ -17,26 +17,6 @@ public:
 };
 
 class UserManager {
-private:
-    map<string, User> users;
-    string filename = "../../users.txt";
-
-    void loadUsers() {
-        ifstream infile(filename);
-        if (!infile) return;
-        string uname, pass;
-        while (infile >> uname >> pass) {
-            users[uname] = User(uname, pass);
-        }
-        infile.close();
-    }
-
-    void saveUser(User& user) {
-        ofstream outfile(filename, ios::app);
-        outfile << user.username << " " << user.password << endl;
-        outfile.close();
-    }
-
 public:
     UserManager() {
         loadUsers();
@@ -57,5 +37,25 @@ public:
             return false;
         }
         return users[uname].password == pass;
+    }
+
+private:
+    map<string, User> users;
+    string filename = "../../users.txt";
+
+    void loadUsers() {
+        ifstream infile(filename);
+        if (!infile) return;
+        string uname, pass;
+        while (infile >> uname >> pass) {
+            users[uname] = User(uname, pass);
+        }
+        infile.close();
+    }
+
+    void saveUser(User& user) {
+        ofstream outfile(filename, ios::app);
+        outfile << user.username << " " << user.password << endl;
+        outfile.close();
     }
 };
