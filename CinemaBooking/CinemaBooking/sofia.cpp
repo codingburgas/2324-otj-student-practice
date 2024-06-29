@@ -9,7 +9,7 @@
 
 
 
-void Sofia() {
+void Sofia(string username) {
 
     system("cls");
     string address = "../../FrontEnd-Captions/SofiaCaption.txt";
@@ -126,7 +126,7 @@ void Sofia() {
     std::cout << "Amount to pay: $25\n\n";
 
 
-    // ... Rest of your code ...
+ 
 
 // Ask for payment method
     int paymentMethod;

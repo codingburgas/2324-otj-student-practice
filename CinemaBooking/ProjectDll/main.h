@@ -8,10 +8,10 @@
 using namespace std;
 
 int main();
-void menu();
-void Burgas();
-void Varna();
-void Sofia();
+void menu(string username);
+void Burgas(string username);
+void Varna(string username);
+void Sofia(string username);
 void login();
 
 #endif

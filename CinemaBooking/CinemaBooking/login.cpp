@@ -49,7 +49,7 @@ void login() {
             if (userManager.loginUser(username, password)) {
                 cout << setw(126) << "Login successful!" << endl;
                 pause();
-                menu();
+                menu(username);
             }
             else {
                 cout << setw(133) << "Invalid username or password!" << endl;

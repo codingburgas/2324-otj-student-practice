@@ -9,7 +9,7 @@
 
 
 
-void Varna() {
+void Varna(string username) {
 
     system("cls");
     string address = "../../FrontEnd-Captions/VarnaCaption.txt";
@@ -125,8 +125,6 @@ void Varna() {
     std::cout << "-----------------------------------------------\n\n";
     std::cout << "Amount to pay: $25\n\n";
 
-
-    // ... Rest of your code ...
 
 // Ask for payment method
     int paymentMethod;

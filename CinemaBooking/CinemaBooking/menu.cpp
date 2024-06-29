@@ -3,7 +3,7 @@
 
 using namespace std;
 
-void menu() {
+void menu(string username) {
     int choice;
 
     system("cls");
@@ -14,13 +14,13 @@ void menu() {
 
     switch (choice) {
     case 1:
-        Burgas();
+        Burgas(username);
         break;
     case 2:
-        Varna();
+        Varna(username);
         break;
     case 3:
-       Sofia();
+       Sofia(username);
         cout << endl;
       
         break;
@@ -28,7 +28,7 @@ void menu() {
 
         cout << setw(150) << "Invalid choice. Please enter a number between [1, 2, 3 ...]";
         
-        menu();
+        menu(username);
     }
 
 }

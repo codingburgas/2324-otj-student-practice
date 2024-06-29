@@ -9,7 +9,7 @@
 
 
 
-void Burgas() {
+void Burgas(string username) {
 
     system("cls");
     string address = "../../FrontEnd-Captions/BurgasCaption.txt";
@@ -119,14 +119,12 @@ void Burgas() {
 
 
     std::cout << "\nReceipt:\n\n";
-    std::cout << "To Mrs/Ms Ivan" << "\n\n";
+    std::cout << "To Mrs/Ms " << username <<  "\n\n";
     std::cout << "Seat selected: " << selectedSeat << "\n\n";
     std::cout << "Price of seat: $25\n\n";
     std::cout << "-----------------------------------------------\n\n";
     std::cout << "Amount to pay: $25\n\n";
 
-
-    // ... Rest of your code ...
 
 // Ask for payment method
     int paymentMethod;
