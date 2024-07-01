@@ -16,3 +16,4 @@ void userDashboard();
 void adminDashboard();
 void cancelBooking();
 void changeSeats();
+void time();

@@ -21,7 +21,7 @@ void selectmovie() {
 
         if (choicen >= 1 && choicen <= 7) {
             system("CLS");
-            cinemaBook();
+            time();
         }
         if (choicen == 0) {
             system("CLS");

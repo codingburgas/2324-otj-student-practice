@@ -1,0 +1,4 @@
+Booking Summary
+
+Adult ticket: Row A, Seat 1 - $12
+Total Price: $12
