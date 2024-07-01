@@ -244,11 +244,11 @@ void time() {
     ascii();
     cout << setw(40) << "" << "Select your time" << endl;
     cout << endl;
-    cout << setw(40) << "" << "1. 14:00" << endl;
-    cout << setw(40) << "" << "2. 16:00" << endl;
-    cout << setw(40) << "" << "3. 18:00" << endl;
-    cout << setw(40) << "" << "4. 20:00" << endl;
-    cout << setw(40) << "" << "5. 2:00" << endl;
+    cout << setw(40) << "" << "1. 14:00 / 3.07" << endl;
+    cout << setw(40) << "" << "2. 16:00 / 3.07" << endl;
+    cout << setw(40) << "" << "3. 18:00 / 3.07" << endl;
+    cout << setw(40) << "" << "4. 20:00 / 3.07" << endl;
+    cout << setw(40) << "" << "5. 22:00 / 3.07" << endl;
     cout << endl;
     cout << setw(40) << "" << "Enter your choice or enter any button to go back: ";
 
