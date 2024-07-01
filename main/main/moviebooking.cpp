@@ -116,13 +116,11 @@ void processPayment(double totalPrice, const vector<Ticket>& tickets) {
         cin >> paymentChoice;
 
         if (paymentChoice == 1) {
-            // Cash payment
             system("CLS");
             displaySummary(tickets, totalPrice);
             break;
         }
         else if (paymentChoice == 2) {
-            // Card payment
             string cardNumber, expiryDate, cvv;
 
             while (true) {
@@ -137,7 +135,6 @@ void processPayment(double totalPrice, const vector<Ticket>& tickets) {
                 cout << setw(40) << "" << "CVV (3 digits): ";
                 cin >> cvv;
 
-                // Validate card details
                 bool isValid = true;
                 if (cardNumber.length() != 16 || !all_of(cardNumber.begin(), cardNumber.end(), ::isdigit)) {
                     cout << setw(40) << "" << "\033[1;31mInvalid card number.\033[0m" << endl;

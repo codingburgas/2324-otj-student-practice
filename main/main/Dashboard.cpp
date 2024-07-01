@@ -65,7 +65,8 @@ void displayDashboard() {
         }
         break;
         case 3:
-            dashboard();
+            system("CLS");
+            main();
         default:
             cout << setw(40) << "" << "\033[1;31mInvalid choice. Please try again.\033[0m" << endl;
             system("pause");
