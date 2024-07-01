@@ -17,6 +17,5 @@
  (4)               10:00                 13:30                 15:00               Titanic
  (5)               9:00                  11:00                 13:40               Abagail
                 
-                                         6.Exit 
  
                              Enter your choice [1, 2, 3 ...]:

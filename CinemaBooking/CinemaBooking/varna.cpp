@@ -116,6 +116,7 @@ void Varna(string username) {
         print(address);
        
         cout << "To Mrs/Ms " << username << "\n\n";
+        cout << "Movie selected: " << selectedMovie << "\n\n";
         cout << "Seat selected: " << selectedSeat << "\n\n";
         cout << "Price of seat: $25\n\n";
         cout << "-----------------------------------------------\n\n";
