@@ -1,8 +1,6 @@
 #include "../ProjectDll/front-end.h"
 #include "../ProjectDll/main.h"
 
-using namespace std;
-
 void menu(string username) {
     int choice;
 
