@@ -63,7 +63,7 @@ void Varna(string username) {
                 cout << "You selected the showtime: " << selectedShowtime << "\n";
 
                 system("cls");
-                string address = "../../FrontEnd-Captions/seats.txt";
+                string address = "../../FrontEnd-Captions/SeatMap.txt";
                 print(address);
 
 
