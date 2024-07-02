@@ -1,8 +1,9 @@
 #include "MainMenu.h"
 void about() {
 	ascii();
-	cout << setw(55) << "" << "About Us" <<endl;
+	cout << setw(55) << "" << "About" <<endl;
 	cout << endl;
+
 
 	ifstream file("../about.txt");
 
