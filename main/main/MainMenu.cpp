@@ -17,7 +17,7 @@ int main() {
         cout << setw(centerPos) << "" << "2. Viral Movies" << endl;
         cout << setw(centerPos) << "" << "3. Register" << endl;
         cout << setw(centerPos) << "" << "4. Open Ticket" << endl;
-        cout << setw(centerPos) << "" << "5. Dashboard" << endl;
+        cout << setw(centerPos) << "" << "5. About" << endl;
         cout << setw(centerPos) << "" << "6. Exit" << endl;
         cout << endl;
         cout << setw(choicePos) << "" << "Enter your choice: ";
@@ -43,7 +43,7 @@ int main() {
             break;
         case 5:
             system("CLS");
-            dashboard();
+            about();
             break;
         case 6:
             system("CLS");

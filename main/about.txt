@@ -1,0 +1,7 @@
+				This C++ console application streamlines movie booking by offering
+				user account management, dynamic movie listings, and ticket booking
+				features. Users can create accounts, browse movies, select showtimes,
+				and book tickets, with real-time updates on seat availability. The
+				system ensures a personalized experience by maintaining booking
+				history and providing admin access for managing movie listings
+				and showtimes.

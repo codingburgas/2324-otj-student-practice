@@ -28,4 +28,5 @@ void viralmovies();
 void currentmovies();
 void city();
 void dashboard();
+void about();
 #endif
